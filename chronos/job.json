@@ -1,0 +1,15 @@
+{
+    "schedule": "R0/2016-04-13T10:31:00Z/PT2M",
+    "name": "lgv2-2-diff-roll-group1",
+    "container": {
+        "type": "DOCKER",
+        "image": "maluuba/jobs/deploy",
+        "network": "BRIDGE"
+    },
+    "cpus": "0.2",
+    "mem": "256",
+    "uris": [],
+    "epsilon": "PT30M",
+    "shell": true,
+    "command": "python /opt/infrastructure/trigger_rolling_update.py us-east-1 --stack-name lgv2-2-diff --group-name Group1 --terminate --config-target prod"
+}
